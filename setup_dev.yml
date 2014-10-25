@@ -1,0 +1,11 @@
+- hosts: windows
+  tasks:
+
+  - name: ping target machine to see whether network is ok
+    win_ping:
+
+  - name: install 7zip for windows machine
+    win_msi: path=c:\\Users\\Administrator\\Downloads\\7z920-x64.msi
+
+  - name: uninstall 7zip for windows machine
+    win_msi: path=c:\\Users\\Administrator\\Downloads\\7z920-x64.msi state=absent
