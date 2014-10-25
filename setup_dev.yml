@@ -9,3 +9,13 @@
 
   - name: uninstall 7zip for windows machine
     win_msi: path=c:\\Users\\Administrator\\Downloads\\7z920-x64.msi state=absent
+
+  - name: start go server service
+    win_service: 
+      name: Go Agent
+      state: stopped
+
+  - name: stop go server service
+    win_service:
+      name: Go Agent
+      state: started
