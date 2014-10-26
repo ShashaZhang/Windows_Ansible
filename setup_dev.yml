@@ -1,7 +1,7 @@
 - hosts: windows
   tasks:
 
-  - name: ping target machine to see whether network is ok
+  - name: ping target machine
     win_ping:
 
   - name: install 7zip for windows machine
